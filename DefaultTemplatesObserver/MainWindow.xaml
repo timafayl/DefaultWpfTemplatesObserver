@@ -1,0 +1,36 @@
+﻿<Window x:Class="DefaultTemplatesObserver.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Default Templates Observer"
+        Height="800" Width="1200"
+        Loaded="MainWindow_OnLoaded"
+        Icon="Resources/view-files.ico"
+        WindowStartupLocation="CenterScreen">
+
+    <Grid Name="Grid">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <ListBox Name="LstTypes"
+                 Grid.Column="0"
+                 Padding="10"
+                 SelectionMode="Single"
+                 SelectionChanged="LstTypes_OnSelectionChanged"
+                 FontSize="14"/>
+
+        <TextBox Name="TxtTemplate"
+                     Grid.Column="1"
+                     Padding="20"
+                     TextWrapping="Wrap"
+                     Height="Auto"
+                     Width="Auto"
+                     FontFamily="Consolas"
+                     FontSize="14"/>
+    </Grid>
+</Window>
